@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SanPhamController;
+use App\Http\Controllers\DanhMucController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home');
 });
+Route::get('giohang', function () {
+    return view('pages.giohang');
+});
+Route::get('/search', [SanPhamController::class, 'search'])->name('search') ;
+
+// Route::get('/', [DanhMucController::class, 'index'])->name('navigation');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -27,5 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/sanpham/{id}', [SanPhamController::class, 'show'])->name('sanpham.show');
 
 require __DIR__.'/auth.php';

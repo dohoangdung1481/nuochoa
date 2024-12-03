@@ -17,10 +17,20 @@
                 </div>
                 <p class="lead"> {{ $sanpham->mo_ta }}</p>
                 <div class="d-flex">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem">
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Thêm vào giỏ hàng</button>
+                    {{-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem"> --}}
+                   
+                        <form action="{{ route('giohang.add') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="san_pham_id" value="{{ $sanpham->san_pham_id }}">
+                            <input type="hidden" name="ten_san_pham" value="{{ $sanpham->ten_san_pham }}">
+                            <input type="hidden" name="gia" value="{{ $sanpham->gia }}">
+                            <input class="form-control text-center me-3" id="inputQuantity" name="qty" type="number" value="1" min="1" style="max-width: 3rem">
+                            <button type="submit" class="btn btn-outline-dark flex-shrink-0">
+                                <i class="bi-cart-fill me-1"></i>
+                                Thêm vào giỏ hàng
+                            </button>
+                        </form>
+                        
                 </div>
             </div>
         </div>
@@ -39,53 +49,8 @@
                     <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
                     <div class="card-body p-4">
                         <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 1</h5>
-                            $25.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sản phẩm 2 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 2</h5>
-                            $30.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sản phẩm 3 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 3</h5>
-                            $35.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sản phẩm 4 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 4</h5>
-                            $40.00
+                            <h5 class="fw-bolder">{{ $sanpham->ten_san_pham }}</h5>
+                            {{ $sanpham->gia }}
                         </div>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -96,4 +61,17 @@
         </div>
     </div>
 </section>
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+
 @endsection

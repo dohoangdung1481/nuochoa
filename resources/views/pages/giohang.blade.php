@@ -1,210 +1,61 @@
 @extends('layouts.app')
 @section('content')
-<section class="h-100 h-custom" style="background-color: #6a696f;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12">
-          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-            <div class="card-body p-0">
-              <div class="row g-0">
-                <div class="col-lg-8">
-                  <div class="p-5">
-                    <div class="d-flex justify-content-between align-items-center mb-5">
-                      <h1 class="fw-bold mb-0">Giỏ hàng</h1>
-                      <h6 class="mb-0 text-muted">3 sanpham</h6>
-                    </div>
-                    <hr class="my-4">
-  
-                    <div class="row mb-4 d-flex justify-content-between align-items-center">
-                      <div class="col-md-2 col-lg-2 col-xl-2">
-                        <img
-                          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
-                          class="img-fluid rounded-3" alt="Cotton T-shirt">
-                      </div>
-                      <div class="col-md-3 col-lg-3 col-xl-3">
-                        <h6 class="text-muted">Shirt</h6>
-                        <h6 class="mb-0">Cotton T-shirt</h6>
-                      </div>
-                      <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                          <i class="fas fa-minus"></i>
-                        </button>
-  
-                        <input id="form1" min="0" name="quantity" value="1" type="number"
-                          class="form-control form-control-sm" />
-  
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                        <h6 class="mb-0">€ 44.00</h6>
-                      </div>
-                      <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                        <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                      </div>
-                    </div>
-                    
-  
-                    <hr class="my-4">
-  
-                    <div class="row mb-4 d-flex justify-content-between align-items-center">
-                      <div class="col-md-2 col-lg-2 col-xl-2">
-                        <img
-                          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img7.webp"
-                          class="img-fluid rounded-3" alt="Cotton T-shirt">
-                      </div>
-                      <div class="col-md-3 col-lg-3 col-xl-3">
-                        <h6 class="text-muted">Shirt</h6>
-                        <h6 class="mb-0">Cotton T-shirt</h6>
-                      </div>
-                      <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                          <i class="fas fa-minus"></i>
-                        </button>
-  
-                        <input id="form1" min="0" name="quantity" value="1" type="number"
-                          class="form-control form-control-sm" />
-  
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                          <i class="fas fa-plus"></i>
-                        </button>
-                      </div>
-                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                        <h6 class="mb-0">€ 44.00</h6>
-                      </div>
-                      <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                        <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                      </div>
-                    </div>
-  
-                    <hr class="my-4">
-  
-                    <div class="pt-5">
-                      <h6 class="mb-0"><a href="/" class="text-body"><i
-                            class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 bg-body-tertiary">
-                  <div class="p-5">
-                    <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
-                    <hr class="my-4">
-  
-                    <div class="d-flex justify-content-between mb-4">
-                      <h5 class="text-uppercase">items 3</h5>
-                      <h5>€ 132.00</h5>
-                    </div>
-  
-                    <h5 class="text-uppercase mb-3">Shipping</h5>
-  
-                    <div class="mb-4 pb-2">
-                      <select data-mdb-select-init>
-                        <option value="1">Standard-Delivery- €5.00</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                      </select>
-                    </div>
-  
-                    <h5 class="text-uppercase mb-3">Give code</h5>
-  
-                    <div class="mb-5">
-                      <div data-mdb-input-init class="form-outline">
-                        <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea2">Enter your code</label>
-                      </div>
-                    </div>
-  
-                    <hr class="my-4">
-  
-                    <div class="d-flex justify-content-between mb-5">
-                      <h5 class="text-uppercase">Total price</h5>
-                      <h5>€ 137.00</h5>
-                    </div>
-  
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-block btn-lg"
-                      data-mdb-ripple-color="dark">Register</button>
-  
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+@if (session('success'))
+    <div class="alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3" role="alert" style="max-width: 250px; font-size: 14px;">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-  </section>
+@endif
 
-  <section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5">
-        <h2 class="fw-bolder mb-4">re1</h2>
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
-            <!-- Sản phẩm 1 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 1</h5>
-                            $25.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sản phẩm 2 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 2</h5>
-                            $30.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sản phẩm 3 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 3</h5>
-                            $35.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sản phẩm 4 -->
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sản phẩm 4</h5>
-                            $40.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><button class="btn btn-outline-dark">Thêm vào giỏ</button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container mt-5 mb-5"> <!-- Thêm mb-5 để footer không chồng lên nội dung -->
+    <h1 class="text-center mb-4">Giỏ hàng của bạn</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th class="text-center">Tên sản phẩm</th>
+                    <th class="text-center">Số lượng</th>
+                    <th class="text-center">Giá</th>
+                    <th class="text-center">Tổng cộng</th>
+                    <th class="text-center">Tùy chọn</th>
+                </tr>
+            </thead>
+            <tbody>
+                @php
+                    $total = 0; // Biến lưu tổng tiền
+                @endphp
+                @foreach($cartItems as $item)
+                    @php
+                        $subtotal = $item->price * $item->qty;
+                        $total += $subtotal;
+                    @endphp
+                    <tr>
+                        <td class="text-center align-middle">{{ $item->name }}</td>
+                        <td class="text-center align-middle">
+                            <form action="{{ route('giohang.update', $item->rowId) }}" method="POST" class="d-inline">
+                                @csrf
+                                <input type="number" name="qty" value="{{ $item->qty }}" min="1" 
+                                       class="form-control d-inline text-center" style="width: 70px;">
+                                <button type="submit" class="btn btn-sm btn-secondary">Sửa</button>
+                            </form>
+                        </td>
+                        <td class="text-center align-middle">{{ number_format($item->price, 0, ',', '.') }} VND</td>
+                        <td class="text-center align-middle">{{ number_format($subtotal, 0, ',', '.') }} VND</td>
+                        <td class="text-center align-middle">
+                            <form action="{{ route('giohang.remove', $item->rowId) }}" method="POST" class="d-inline">
+                                @csrf
+                                <button type="submit" class="btn btn-sm btn-danger">Xóa</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-</section>
+
+    <div class="text-end mt-4">
+        <h4 class="text-danger">Tổng tiền: {{ number_format($total, 0, ',', '.') }} VND</h4>
+        <a href="" class="btn btn-success btn-lg mt-3">Thanh toán</a>
+    </div>
+</div>
 @endsection

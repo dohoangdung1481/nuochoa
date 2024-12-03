@@ -2,16 +2,11 @@
 @section('content')
     @include('components.slider-home')
 
-    <div class="row text-center pt-3">
+    <div class="row text-center pt-5">
         <div class="col-lg-6 m-auto">
-            <h1 class="h1">Categories of The Month</h1>
-            <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-                {{-- @foreach ($danhmuc as $dm)
-                {{$dm->ten_danh_muc}}
-                @endforeach --}}
-            </p>
+            <h1 class="h1" style="font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 700; color: #333; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
+                Thank you for viewing and trusting
+            </h1>
         </div>
     </div>
 

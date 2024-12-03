@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SanPhamController;
 use App\Http\Controllers\DanhMucController;
+use App\Http\Controllers\GioHangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,18 @@ Route::get('/', function () {
 Route::get('giohang', function () {
     return view('pages.giohang');
 });
+Route::get('gioithieu', function () {
+    return view('pages.gioithieu');
+});
 Route::get('/search', [SanPhamController::class, 'search'])->name('search') ;
+
+//gio hang
+Route::get('/giohang', [GioHangController::class, 'index'])->name('giohang.index');
+Route::post('/giohang/add', [GioHangController::class, 'add'])->name('giohang.add');
+Route::post('/giohang/update/{rowId}', [GioHangController::class, 'update'])->name('giohang.update');
+Route::post('/giohang/remove/{rowId}', [GioHangController::class, 'remove'])->name('giohang.remove');
+
+
 
 // Route::get('/', [DanhMucController::class, 'index'])->name('navigation');
 

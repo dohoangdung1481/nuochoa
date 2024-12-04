@@ -40,6 +40,13 @@ class SanPhamController extends Controller
         return view('pages.chitietsanpham', compact('sanpham'));
     }
 
+    public function getAllSanpham()
+{
+    $sanpham = SanPham::paginate(6);
+    return view('pages.tatcasanpham', compact('sanpham'));
+}
+
+
     /**
      * Show the form for editing the specified resource.
      */

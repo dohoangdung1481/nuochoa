@@ -9,7 +9,7 @@
             <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Hình ảnh sản phẩm -->
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/000000/ffffff.jpg" alt="...">
+                    <img class="card-img-top" src="./img/panther1.webp" alt="">
                     
                     <!-- Chi tiết sản phẩm -->
                     <div class="card-body p-4">

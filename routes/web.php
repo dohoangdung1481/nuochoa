@@ -26,6 +26,8 @@ Route::get('giohang', function () {
 Route::get('gioithieu', function () {
     return view('pages.gioithieu');
 });
+Route::get('/sanpham', [SanPhamController::class, 'getAllSanpham'])->name('sanpham.all');
+
 Route::get('/search', [SanPhamController::class, 'search'])->name('search') ;
 
 //gio hang

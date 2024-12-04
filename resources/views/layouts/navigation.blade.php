@@ -46,12 +46,12 @@
         </div>
         
 
-        <li class="nav-item navbar-nav ms-auto custom-navbar d-flex align-items-center me-4 hover:bg-light">
-            <a class="nav-link text-secondary" href="{{ route('giohang.index') }}">
-                <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
-                Giỏ hàng của bạn
-            </a>
-        </li>
+        <div class="mx-auto navbar-nav custom-navbar d-flex align-items-center">
+            <li class="nav-item navbar-nav  custom-navbar d-flex align-items-center me-4 hover:bg-light">
+                <a class="nav-link btn btn-outline-secondary" href="{{ route('giohang.index') }}" type="button">
+                    <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i></a>
+            </li>
+        </div>
         
         
         <!-- Right menu -->

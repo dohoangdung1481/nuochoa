@@ -1,5 +1,5 @@
 @php 
-    $sanpham = \App\Models\Sanpham::orderBy('ngay_tao', 'desc')->take(6)->get(); 
+    $sanpham = \App\Models\SanPham::orderBy('ngay_tao', 'desc')->take(6)->get(); 
 @endphp
 
 <section style="background-color: #eee;">
@@ -52,7 +52,7 @@
 
         <!-- Nút Xem thêm, căn phải -->
         <div class="text-center mt-4">
-            <a href="" class="btn btn-secondary">Xem thêm</a>
+            <a href="{{route('sanpham.all')}}" class="btn btn-secondary">Xem thêm</a>
         </div>
         
     </div>

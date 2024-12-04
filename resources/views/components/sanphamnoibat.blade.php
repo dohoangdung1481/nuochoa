@@ -51,7 +51,7 @@
             @endforeach
         </div>
         <div class="text-center mt-4">
-            <a href="" class="btn btn-secondary">Xem thêm</a>
+            <a href="{{route('sanpham.all')}}" class="btn btn-secondary">Xem thêm</a>
         </div>
     </div>
     

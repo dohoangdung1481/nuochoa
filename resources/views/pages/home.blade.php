@@ -9,7 +9,7 @@
             </h1>
         </div>
     </div>
-
+    </div>
     @include('components.sanphamnoibat')
 
     @include('components.sanphammoi')

@@ -1,11 +1,5 @@
 @extends('layouts.app')
 @section('content')
-@if (session('success'))
-    <div class="alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3" role="alert" style="max-width: 250px; font-size: 14px;">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif
 
 <div class="container mt-5 mb-5"> <!-- Thêm mb-5 để footer không chồng lên nội dung -->
     <h1 class="text-center mb-4">Giỏ hàng của bạn</h1>

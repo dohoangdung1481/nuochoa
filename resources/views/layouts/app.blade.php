@@ -25,9 +25,12 @@
                 @yield('content')
             </main>
         </div>
-        
-        
-
+        @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3" role="alert" style="max-width: 250px; font-size: 14px;">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     </body>
     <footer class="bg-body-tertiary text-center text-lg-start mt-auto">
         <!-- Copyright -->
